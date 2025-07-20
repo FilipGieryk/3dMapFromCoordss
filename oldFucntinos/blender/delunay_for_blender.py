@@ -60,7 +60,7 @@ if verts.shape[0] == 0:
     exit()
 
 # Delaunay triangulation
-max_edge_length = 0.5  # Adjust as needed
+max_edge_length = 5  # Adjust as needed
 axis_proj = 'XY'       # 'XY', 'XZ', or 'YZ'
 faces = delaunay_faces_with_max_edge(verts, max_edge_length, axis_proj)
 
