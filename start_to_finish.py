@@ -152,7 +152,7 @@ def rasterize_xyz(df, grid_size, output_folder, tile_x, tile_y):
     rows = np.clip(rows, 0, grid_size - 1)
 
     grid[rows, cols] = z_scaled
-    grid = fill_holes_nearest(grid, nodata=65535, max_radius=7)
+    grid = fill_holes_nearest(grid, nodata=65535, max_radius=10)
 
     print(f"Tile {tile_x},{tile_y}: X [{x_min}, {x_max}], Y [{y_min}, {y_max}], Z [{min_height}, {max_height}]")
     print(f"  Unity Terrain settings for this tile:")
